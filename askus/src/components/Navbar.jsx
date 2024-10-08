@@ -21,7 +21,7 @@ const Navbar = () => {
         <button>Logo</button>
       </div>
 
-      {/* Always Visible Hamburger and Cross Icon */}
+      
       <div className="flex lg:hidden">
         <button onClick={() => setOpen(!open)} aria-label="Toggle Menu">
           {open ? (
@@ -32,7 +32,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Navigation Links for Large Screens */}
+      
       <div className="hidden lg:flex gap-5">
         {navigation.map((item) => (
           <li key={item.name} className="border border-[#115d93] rounded px-1 list-none">
@@ -41,7 +41,7 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Language and Auth Buttons */}
+      
       <div className="flex gap-5">
         <button className="border text-black px-4 rounded py-1 bg-white">
           <FontAwesomeIcon className="pe-2" icon={faEarthAmericas} />
@@ -51,7 +51,7 @@ const Navbar = () => {
         <button className="border text-black px-4 rounded bg-white">Sign Up</button>
       </div>
 
-      {/* Slide-in Menu for Mobile */}
+      
       <div
         className={`fixed inset-y-0 left-0 transform ${open ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 bg-white shadow-lg w-2/3 sm:w-1/2 lg:hidden z-10`}
       >

@@ -13,19 +13,19 @@ const Pagination = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const usersPerPage = 4; // Set to 4 users per page to achieve 2 pages
+  const usersPerPage = 4;
 
-  // Calculate the index of the last user on the current page
+  
   const indexOfLastUser = currentPage * usersPerPage;
-  // Calculate the index of the first user on the current page
+  
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
-  // Get current users
+ 
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
 
   // Pagination handler
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Calculate total pages (should be 2)
+
   const totalPages = Math.ceil(users.length / usersPerPage);
 
   return (

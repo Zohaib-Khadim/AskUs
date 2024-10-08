@@ -9,9 +9,11 @@ const BidTimer = () => {
     fps: 0,
   });
   const [isRunning, setIsRunning] = useState(false);
+  // Increment Handler
  const increment=()=>{
   setPrize( prize * 2);
  }
+  // Decrement Handler
  const decrement=()=>{
   if(prize>10200){
     setPrize( prize / 2);
@@ -46,18 +48,18 @@ const BidTimer = () => {
 
           return { hours, minutes, seconds, fps };
         });
-      }, 16.67); // 60 fps
+      }, 16.67); 
     }
 
-    return () => clearInterval(timerInterval); // Cleanup interval on unmount
+    return () => clearInterval(timerInterval);
   }, [isRunning]);
 
   const toggleTimer = () => {
-    // If starting the timer, initialize it to a specific value (e.g., 1 hour)
+    
     if (!isRunning) {
-      setTime({ hours: 1, minutes: 0, seconds: 0, fps: 0 }); // Adjust this as needed
+      setTime({ hours: 1, minutes: 0, seconds: 0, fps: 0 }); 
     }
-    setIsRunning((prev) => !prev); // Toggle the timer
+    setIsRunning((prev) => !prev);
   };
 
   return (

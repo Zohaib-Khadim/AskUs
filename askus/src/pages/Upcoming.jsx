@@ -5,7 +5,7 @@ const Upcoming = () => {
   const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 3;
-
+// Pagination Logic
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
@@ -20,6 +20,7 @@ const Upcoming = () => {
         <p className="text-center my-6 md:my-8 lg:my-10 font-bold text-[#063d64] text-xl md:text-2xl lg:text-3xl">
           Upcoming Cars in the <br /> Auction Queue
         </p>
+        {/*Mapping on the Cards*/}
         {currentCards.map((card, index) => (
           <Card key={index} />
         ))}
